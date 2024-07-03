@@ -21,6 +21,7 @@ describe('Navigate to google and search amazon and click on iphone 15 pro max',f
     it('Search and select iphone 15 pro max from amazon website',function(){
         cy.Google_search_and_select_from_search_result('Amazon','Amazon.in')
         cy.wait(10000)
+        //
             cy.origin('https://www.amazon.in/',()=>{
                 cy.on('uncaught:exception', (err, runnable) => {
                     // Return false to prevent the error from failing the test
